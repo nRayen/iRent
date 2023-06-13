@@ -1,0 +1,44 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px;
+
+    height: 100px;
+    border: 1px solid red;
+
+    nav {
+        display: flex;
+        gap: 15px;
+
+        a {
+            font-size: 20px;
+            padding: 20px;
+            position: relative;
+
+
+
+            &::after {
+                content: '';
+                bottom: 10px;
+                left: 20px;
+                height: 10px;
+                background-color: red;
+                position: absolute;
+
+            }
+
+            &:hover {
+                &::after {
+                    left: 20px;
+                    right: 20px;
+                    transition: right 1s ease-in ;
+                }
+            }
+
+            &:last-child {
+                color: orange;
+            }
+        }
+    }
+}
